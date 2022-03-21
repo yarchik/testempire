@@ -1,0 +1,54 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  padding: 13.5px 45px 13.5px 45px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid $accentColor;
+  border-radius: 3px;
+  @include transition(.4);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    letter-spacing: -0.4px;
+    color: $whiteColor;
+
+    overflow: hidden;
+
+    min-width: 186px;
+    background-color: $accentColor;
+
+    overflow: hidden;
+    @include transition(.3);
+    @media (max-width: $breakpoint-lg) {
+      padding: 9px 31px 10px 31px;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $accentColor;
+    }
+  }
+
+  &-transparent {
+    background: transparent;
+    color: $accentColor;
+
+    &:hover {
+      background: $accentColor;
+      color: $whiteColor;
+    }
+  }
+}
+

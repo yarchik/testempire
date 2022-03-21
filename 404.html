@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>Tempire</title>
+    <meta name="description" content=""/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link href="assets/css/app.css" rel="stylesheet"/>
+</head>
+<body>
+
+
+<header class="header">
+    <div class="header-main container d-flex">
+
+        <a href="#" class="header-logo default-icon">
+            <img src="assets/img/logo.svg" alt="logo company">
+        </a>
+
+        <div class="navbar">
+
+            <nav class="main-navigation">
+                <ul class="menu">
+                    <li class="menu-item  current-menu-item">
+                        <a href="#">Our advantages</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">Prices / Subscription</a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="burger js-header">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="other-page d-flex align-middle">
+        <img src="assets/img/faq__bg.png" alt="" class="other-page__bg">
+        <div class="container">
+            <div class="row align-center text-center">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                    <div class="other-page__content text-center">
+
+                        <div class="d-flex align-middle align-center mb-30">
+                            <div class="other-page__number overlap">
+                                4
+                            </div>
+                            <figure class="other-page__mask default-icon overlap">
+                                <img src="assets/img/sad.svg" alt="icon mask">
+                            </figure>
+                            <div class="other-page__number overlap">
+                                4
+                            </div>
+                        </div>
+                        <div class="other-page__description overlap">
+                            Sorry, this page does not exist.
+                            <span>Return to the <a href="">home page</a> and try again.</span>
+                        </div>
+                        <a href="" class="btn btn-primary">
+                            TO HOME
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="row align-center">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12 text-center">
+                    <div class="logo-block">
+                        <a href="#" class="logo-block__link default-icon">
+                            <img src="assets/img/logo-footer.svg" alt="logo company"/>
+                        </a>
+                        <div class="logo-block__text">Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl
+                            nunc
+                            quam ac sed.
+                        </div>
+                    </div>
+
+                    <ul class="social-list">
+                        <li class="social-list__item"><a href="" class="d-flex align-middle align-center"><i
+                                class="icon-facebook"></i> </a></li>
+                        <li class="social-list__item"><a href="" class="d-flex align-middle align-center"><i
+                                class="icon-instagram"></i> </a></li>
+                    </ul>
+
+                    <ul class="footer-info d-block d-md-none">
+                        <li><a href="">Privacy policy</a></li>
+                        <li><a href="">Terms of service</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row align-center">
+                <div class="col-xl-7 col-lg-8 col-md-10 col-xs-12 d-flex align-justify align-middle">
+                    <div class="contacts-item d-flex align-left align-middle">
+                        <div class="contacts-item__icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <ul class="contacts-item__list">
+                            <li><a href="tel:+380000000000">+38 (000) 000-00-00</a></li>
+                            <li><a href="tel:+380000000000">+38 (000) 000-00-00</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contacts-item d-flex align-left align-middle">
+                        <div class="contacts-item__icon">
+                            <i class="icon-placeholder"></i>
+                        </div>
+                        <ul class="contacts-item__list">
+                            <li>Your address should be here</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-justify copyright">
+            <div class="col-xl-6 col-lg-6 col-md-4 col-sm-12 col-xs-12 copyright-col">Tempire © Copyright 2022</div>
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-6 col-xs-12 copyright-col">
+                <ul class="footer-info">
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Terms of service</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/sliders.min.js"></script>
+<script src="assets/js/js_tempire.min.js"></script>
+
+<script src="assets/js/accordion.min.js"></script>
+
+
+<script>
+
+    var swiper = new Swiper(".pricing-plan__slider", {
+        slidesPerView: 1,
+        spaceBetween: 11,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 11,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 11,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 11,
+            },
+        },
+    });
+
+</script>

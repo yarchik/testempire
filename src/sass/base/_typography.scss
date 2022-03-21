@@ -1,0 +1,57 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+}
+
+
+
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.icon-ar-bottom:before {
+  content: "\e900";
+}
+.icon-ar-left:before {
+  content: "\e901";
+}
+.icon-ar-right:before {
+  content: "\e902";
+}
+.icon-check:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e904";
+}
+.icon-facebook:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-phone:before {
+  content: "\e907";
+}
+.icon-placeholder:before {
+  content: "\e908";
+}
+.icon-user:before {
+  content: "\e90e";
+}

@@ -1,0 +1,478 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-banner {
+  min-height: 100vh;
+  overflow: hidden;
+  @media (max-width: $breakpoint-md) {
+    min-height: auto;
+    text-align: center;
+  }
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: -1;
+    & img {
+      @media (max-width: $breakpoint-md) {
+      }
+    }
+  }
+  &__title {
+    @include fontSize(24, 40);
+    margin-bottom: 11px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: $whiteColor;
+  }
+
+  &__description {
+    font-weight: normal;
+    @include fontSize(12, 16);
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: $whiteColor;
+    margin-bottom: 27px;
+  }
+
+  & .btn-primary {
+    color: $accentColor;
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  .swiper {
+    &-slide {
+      min-height: 100vh;
+      padding: 185px 0 155px 0;
+    }
+
+    &-button {
+      &-prev, &-next {
+        color: $whiteColor;
+        background: rgba(255, 255, 255, 0.2);
+        font-size: 23px;
+        padding: 10px 25px 11px 25px;
+        @include transition(.3);
+
+        &:hover {
+          color: $accentColor;
+          background: rgba(253, 205, 96, 0.2);
+        }
+
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+
+      &-prev {
+        left: 0;
+      }
+
+      &-next {
+        right: 0;
+      }
+    }
+
+    &-pagination {
+      bottom: 70px;
+      display: none;
+      @media (max-width: $breakpoint-md) {
+        display: block;
+      }
+
+      &-bullet {
+        height: 3px;
+        width: 22px;
+        background-color: #565656;
+        border-radius: 3px;
+        margin: 0 16px !important;
+
+        &-active {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
+}
+
+.s-advantages {
+  background-color: rgba(253, 205, 96, 0.3);
+  padding: 76px 0 63px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 43px 0;
+  }
+
+  &__item {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 38px;
+    }
+
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background: $accentColor;
+    border-radius: 3.75px;
+    margin-bottom: 34px;
+
+    & img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__value {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+
+    color: #969696;
+  }
+}
+
+.s-about {
+  padding: 145px 0 163px 0;
+  background-color: $whiteColor;
+  @media (max-width: $breakpoint-md) {
+    padding: 55px 0 88px 0;
+  }
+
+  .section {
+    &-heading {
+      @media (min-width: $breakpoint-md) {
+        margin-bottom: 29px;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-text {
+
+      font-weight: 500;
+      @include fontSize(12, 16);
+      line-height: 2;
+      color: #333333;
+      width: 80%;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 33px;
+        width: 100%;
+      }
+
+      & p:not(&:last-child) {
+        margin-bottom: 40px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @media (min-width: $breakpoint-md) {
+      padding-right: 30px;
+    }
+  }
+
+  &__img {
+    max-height: 590px;
+    height: 100%;
+
+
+    & img:not(.dot-pattern) {
+      z-index: 2;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    & .dot-pattern {
+      position: absolute;
+      bottom: -41px;
+      left: 41px;
+      width: 176px;
+      height: 191px;
+      z-index: 1;
+      @media (max-width: $breakpoint-md) {
+        width: 90px;
+        height: 90px;
+        bottom: -25px;
+        left: 25px;
+      }
+    }
+  }
+}
+
+.s-price {
+  padding: 89px 0 36px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 45px 0;
+  }
+
+  & .section-text {
+    margin-bottom: 84px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 33px;
+    }
+  }
+
+  .pricing {
+    &-plan {
+      background: $whiteColor;
+      border: 1.11468px solid #D6DAE4;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 30px;
+
+      &.popular {
+        border: 5px solid $accentColor;
+        @media (max-width: $breakpoint-md) {
+          border: 2px solid $accentColor;
+        }
+        .pricing-button{
+          background-color: $accentColor;
+          color: $whiteColor;
+        }
+      }
+
+      &__wrap {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-gap: 11px;
+      }
+
+      &__title {
+        font-weight: 700;
+        @include fontSize(12, 14);
+        line-height: 1.25;
+        color: $whiteColor;
+        padding: 12px 12px;
+        width: 100%;
+        bottom: -10px;
+        position: relative;
+        background: #FDCD60;
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+
+    &-header {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 30px;
+      color: #333333;
+      display: block;
+      margin-bottom: 20px;
+
+
+    }
+
+    &-price {
+      font-weight: 600;
+      @include fontSize(32, 48);
+      line-height: 1;
+      color: #333333;
+
+      & span {
+        @include fontSize(16, 18);
+      }
+    }
+
+    &-features {
+      font-weight: 400;
+      font-size: 14px;
+
+
+      &__item {
+        grid-template-columns: 16px 1fr;
+        display: grid;
+        grid-gap: 11px;
+        margin-bottom: 14px;
+        color: #9CA0AC;
+
+        & span {
+          text-decoration: line-through;
+        }
+
+        &.active {
+          color: #333333;
+
+          & span {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &-button {
+      margin: 40px 0;
+      display: block;
+      padding: 15px 15px 16px 15px;
+      width: 100%;
+      border-width: 2px;
+      border-radius: 3px;
+      @media (max-width: $breakpoint-md) {
+        margin: 20px 0;
+        padding: 13px 15px 14px 15px;
+      }
+    }
+  }
+
+  .swiper {
+    &-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: end;
+    }
+
+    &-button {
+      &__wrap {
+        margin-top: 33px;
+        @media (min-width: $breakpoint-md) {
+          display: none
+        }
+      }
+
+      &__prev, &__next {
+        position: relative;
+        border: 2px solid $accentColor;
+        margin: 0 7.5px;
+
+        & i {
+          font-size: 23px;
+        }
+
+        &:hover {
+          background-color: $accentColor;
+
+          & i {
+            color: $whiteColor;
+          }
+        }
+      }
+
+      &__next {
+        padding: 10px 20px 11px 25px;
+      }
+
+      &__prev {
+        padding: 10px 25px 11px 20px;
+      }
+    }
+  }
+}
+
+.s-faq {
+  padding: 86px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 36px 0;
+  }
+
+  & .section-text {
+    margin-bottom: 80px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+
+    & span {
+      font-weight: 700;
+      @media (max-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  .accordion {
+    padding-top: 8px;
+
+    &-item {
+      padding: 0;
+      margin-bottom: 20px;
+
+      overflow: hidden;
+      border-bottom: 1.35304px solid #D6DAE4;
+
+      &__header {
+
+        cursor: pointer;
+        width: 100%;
+        padding-right: 32px;
+        border: none;
+        text-align: left;
+        outline: none;
+
+        transition: 0.4s;
+        position: relative;
+
+        padding-bottom: 14px;
+        font-weight: 700;
+        font-size: 18px;
+        @include fontSize(16, 18);
+        line-height: 1.25;
+        letter-spacing: -0.676519px;
+        color: #333333;
+
+        & .icon-ar-bottom {
+          font-size: 12px;
+
+          &__wrap {
+
+          }
+        }
+      }
+
+      &__body {
+        display: none;
+
+        &-inner {
+          padding-bottom: 20px;
+          position: relative;
+          @include fontSize(12, 18);
+          line-height: 1.5;
+          font-weight: 400;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  .active {
+    & .icon-ar-bottom {
+      color: #333333;
+
+      &__wrap {
+        transform: rotate(180deg);
+      }
+    }
+
+
+    .accordion-item {
+      &__header {
+        color: $accentColor
+      }
+    }
+  }
+}

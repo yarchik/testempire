@@ -1,0 +1,110 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.other-page {
+  min-height: calc(100vh - 140px);
+  margin-top: 140px;
+  overflow: hidden;
+  padding-top: 0;
+  position: relative;
+  background-color: #F8F8F8;
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    margin-top: 52px;
+    padding: 50px 0;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: 150px 0;
+    color: #333333;
+    @media (max-width: $breakpoint-md) {
+      padding: 53px 3%;
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    @include fontSize(100, 170);
+    line-height: 0.9;
+    color: #333333;
+  }
+
+  &__mask {
+    width: 118px;
+    @media (max-width: $breakpoint-md) {
+      width: 69px;
+    }
+  }
+
+  &__title {
+    @include fontSize(40, 70);
+    color: #333333;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 16px;
+    }
+    & figure {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 25px auto;
+      background-color: $accentColor;
+      border-radius: 100%;
+      @media (max-width: $breakpoint-md) {
+        width: 66px;
+        height:66px;
+      }
+      & img {
+        width: 70px;
+        @media (max-width: $breakpoint-md) {
+
+          height:38px;
+        }
+      }
+    }
+
+    & img {
+      display: block;
+
+    }
+  }
+
+  &__description {
+    margin: 0 auto 24px auto;
+    @include fontSize(18, 24);
+    line-height: 1.2;
+    font-weight: 700;
+
+    & a {
+      font-weight: 700;
+      color: $accentColor;
+      @include fontSize(14, 16);
+    }
+
+    & span {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+      font-weight: 500;
+      @include fontSize(14, 16);
+    }
+
+    @media (max-width: $breakpoint-md) {
+    }
+  }
+}
